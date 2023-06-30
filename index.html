@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Meds</title>
+</head>
+
+<body>
+    <div id="nav-bar">
+        <button type="button" id="rst">Reset</button>
+        <button type="button" id="ord">Order</button>
+   
+        <button type="button" id="setSelection">All</button>
+        <button type="button" class="cat" value="GP">GP</button>
+        <button type="button" class="cat" value="GYNAC">GYNAC</button>
+        <button type="button" class="cat" value="MD">MD</button>
+        <button type="button" class="cat" value="ORTHO">ORTHO</button>
+        <button type="button" class="cat" value="ENT">ENT</button>
+        <button type="button" class="cat" value="SURGEN">SURGEN</button>
+        
+        <!-- <button type="button" id="srch">Search</button>  -->
+        <!-- <input type="text" placeholder="Search.." id="myInput" /> -->
+        <p id="select_count"></p>
+    </div>
+    <div id="img-container">
+        <!--<img src="../img/Title.jpg " alt="title" iname="title">
+
+        <img src="../img/01 GLIMCIM M  -MD-GP-SURGEN.jpg" alt="1" iname="1">
+        <img src="../img/02 VOG GM2       -MD-GP-SURGEN.jpg" alt="2" iname="2">
+        <img src="../img/03 VIL M -MD-GP-SURGEN.jpg" alt="3" iname="3">
+        <img src="../img/04 VIL 50 -MD-GP.jpg" alt="4" iname="4">
+       <img src="../img/05 TENE M -MD-GP-SURGEN.jpg" alt="5" iname="5">
+        <img src="../img/06 NEURO LC      -MD-GP-ORTHO-SURGEN.jpg" alt="6" iname="6">
+        <img src="../img/07 BECOCIM FORTE-MD-GP -ORTHO-ENT-SURGEN.jpg" alt="7" iname="7">
+       <img src="../img/8 PANTOCIM 40        -MD-GYNAC-GP-ORTHO.jpg" alt="8" iname="8">
+        <img src="../img/9 RABECIM            -MD-GYNAC-GP-ORTHO.jpg" alt="9" iname="9">
+        <img src="../img/10 CAL +                -MD-GP-ORTHO.jpg" alt="10" iname="10">
+        <img src="../img/11 MONTECIM     -MD-GYNAC-GP.jpg" alt="11" iname="11">
+        <img src="../img/12 ACIMS SP -GP-ORTHO.jpg" alt="12" iname="12">
+        <img src="../img/13 NEUROCIN INJ    -MD-GYNAC-GP-ORTHO.jpg" alt="13" iname="13">
+        <img src="../img/14 MIKACIM         -MD-GYNAC-GP-ORTHO.jpg" alt="14" iname="14">
+        <img src="../img/15 MYOFIL -GYNAC.jpg" alt="15" iname="15">
+        <img src="../img/16 FOLICIM -GYNAC.jpg" alt="16" iname="16">
+        <img src="../img/17 FEROCIM -GYNAC.jpg" alt="17" iname="17">
+        <img src="../img/18 CALCIM -GYNAC.jpg" alt="18" iname="18">
+        <img src="../img/19 NEUROCIM LC -GYNAC.jpg" alt="19" iname="19">
+        <img src="../img/20 BECOCIM -GYNAC.jpg" alt="20" iname="20"> -->
+    </div>
+    <div id="sld1">
+        <div class="sld1btndiv">
+            <button type="button" id="bck1">Back</button>
+            <button type="button" id="shw">Show</button>
+            <button type="button" id="srt">Sort</button>
+        </div>
+        <div id="sorted_div">
+            
+        </div>
+    </div>
+    <div id="sldshow">
+        <button type="button" id="bck2">Back</button>
+        <div id="slides">
+        
+        </div>
+        <a class="prev" id="minusSlides">❮</a>
+        <a class="next" id="plusSlides">❯</a>
+        <div id="film-outer">
+            <div id="film">
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery-mob.js"></script>
+    <script src="js/jquery1.js"></script>
+
+</body>
+
+</html>
